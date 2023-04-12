@@ -1,13 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import Home from './paginas/home/Home'
-import './App.css'
+import React from 'react';
+import Navbar from './componentes/estaticos/navbar/Navbar';
+import Footer from './componentes/estaticos/footer/Footer';
+import { Grid } from '@material-ui/core';
+import Home from './paginas/home/Home'; 
+import './App.css';
 
 function App() {
   return (
-    <Home />
+    <>
+      <Navbar />
+      <Home />
+      <Footer />
+    </>
   );
 }
 
-export default Home;
+export default App;
