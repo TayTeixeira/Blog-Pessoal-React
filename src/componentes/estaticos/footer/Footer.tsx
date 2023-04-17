@@ -4,35 +4,36 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import {Typography, Grid } from '@material-ui/core';
 import {Box} from '@mui/material';
+import './Footer.css';
 
 function Footer() {
     return (
         <>
             <Grid container direction="row" justifyContent="center" alignItems="center">
-                <Grid alignItems="center" item xs={12}>
-                    <Box style={{ backgroundColor: "#eceaf5", height: "14vh" }}>
+                <Grid item xs={12}>
+                    <Box className='box1'>
                         <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center">
-                            <Typography variant="h5" align="center" gutterBottom style={{ color: "black" }}>Siga-nos nas redes sociais </Typography>
+                            <Typography variant="h5" align="center" gutterBottom className='textos'>Siga-nos nas redes sociais </Typography>
                         </Box>
                         <Box display="flex" alignItems="center" justifyContent="center">
                             <a href="https://github.com/TayTeixeira" target="_blank">
-                                <GitHubIcon style={{ fontSize: 45, color: "black" }} />
+                                <GitHubIcon className='redes' />
                             </a>
                             <a href="https://www.instagram.com/tayhe4rt/" target="_blank">
-                                <InstagramIcon style={{ fontSize: 45, color: "black" }} />
+                                <InstagramIcon className='redes' />
                             </a>
                             <a href="https://www.linkedin.com/in/taymara/" target="_blank">
-                                <LinkedInIcon style={{ fontSize: 45, color: "black" }} />
+                                <LinkedInIcon className='redes' />
                             </a>
                         </Box>
                     </Box>
-                    <Box style={{ backgroundColor: "#34d6be", height: "60px" }}>
+                    <Box className='box2'>
                         <Box paddingTop={1}>
-                            <Typography variant="subtitle2" align="center" gutterBottom style={{ color: "white" }} >© 2023 Copyright:</Typography>
+                            <Typography variant="subtitle2" align="center" gutterBottom className='textos' >© 2023 Copyright:</Typography>
                         </Box>
                         <Box>
                             <a target="_blank" href="https://www.google.com/intl/pt-BR/gmail/about/#inbox">
-                                <Typography variant="subtitle2" gutterBottom style={{ color: "white" }} align="center">taymaratda@gmail.com</Typography>
+                                <Typography variant="subtitle2" gutterBottom className='textos' align="center">taymaratda@gmail.com</Typography>
                             </a>
                         </Box>
                     </Box>

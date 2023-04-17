@@ -1,0 +1,23 @@
+.textos-login {
+    font-weight: bold !important;
+}
+
+.class-decorator-none{
+    text-decoration: none;
+}
+
+.imagem-de-fundo{
+    background-image: url("../../assets/img/blog.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vh;
+    min-height: 100vh;
+}
+
+.botao-login {
+    border-color: white !important;
+    background-color: #34d6be !important; 
+    color: white !important; 
+    font-weight: bold !important;
+}

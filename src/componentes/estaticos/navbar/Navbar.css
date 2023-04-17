@@ -1,0 +1,13 @@
+.barra-ferramenta{
+    background-color: #34d6be;
+     color: "white";
+}
+
+.cursor{
+    cursor: pointer;
+    color: white;
+}
+
+.text-decorator-none{
+    text-decoration: none;
+}
