@@ -1,4 +1,4 @@
-import React, {useState, useEffect, ChangeEvent} from "react";
+import React, { useState, useEffect, ChangeEvent } from "react";
 import { Grid, Typography, TextField } from '@material-ui/core';
 import { Box, Button } from "@mui/material";
 import './CadastroUsuario.css';
@@ -51,7 +51,7 @@ function CadastroUsuario() {
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
         if (confirmarSenha == user.senha) {
-            cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
+            await cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
             alert('Usuario cadastrado com sucesso')
         } else {
             alert('Dados inconsistentes. Favor verificar as informações de cadastro.')
