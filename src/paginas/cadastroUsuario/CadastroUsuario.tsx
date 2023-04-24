@@ -51,12 +51,25 @@ function CadastroUsuario() {
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
         if (confirmarSenha == user.senha) {
-            await cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
-            alert('Usuario cadastrado com sucesso')
+
+            try {
+                await cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
+                alert('Usuario cadastrado com sucesso')
+
+            } catch (error) {
+                console.log(`Error: ${error}`)
+                alert("Erro ao cadastrar o Usuário")
+            }
+
         } else {
             alert('Dados inconsistentes. Favor verificar as informações de cadastro.')
+
+            setUser({ ...user, senha: "" })
+            setConfirmarSenha("")
         }
     }
+
+
     return (
         <Grid container direction='row' justifyContent='center' alignItems='center'>
             <Grid item xs={6} className='imagem2'></Grid>

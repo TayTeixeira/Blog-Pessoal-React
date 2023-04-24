@@ -1,3 +1,13 @@
 .titulo {
     font-weight: bold;
 }
+
+.cor-app-bar{
+    background-color: #34d6be !important;
+}
+
+/*.fonte-app-bar{
+    color: white !important; 
+    font-weight: bold !important;
+    border-color: white !important;
+}*/
