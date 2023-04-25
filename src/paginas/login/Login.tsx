@@ -2,8 +2,7 @@ import React, { useState, useEffect, ChangeEvent } from "react";
 import { Grid, Typography, TextField } from '@material-ui/core';
 import { Box, Button } from "@mui/material";
 import './Login.css'
-import { TextFields } from "@mui/icons-material";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import UserLogin from "../../models/UserLogin";
 import { login } from "../../services/Service";
 import { useDispatch } from "react-redux";
