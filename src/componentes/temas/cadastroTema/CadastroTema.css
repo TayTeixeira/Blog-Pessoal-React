@@ -1,3 +1,10 @@
 .topo{
     margin-top: 20px;
 }
+
+.botao-cadastro-tema {
+    border-color: white !important;
+    background-color: #34d6be !important; 
+    color: white !important; 
+    font-weight: bold !important;
+}

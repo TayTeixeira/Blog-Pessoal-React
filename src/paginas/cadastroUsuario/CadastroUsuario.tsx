@@ -6,6 +6,7 @@ import { cadastroUsuario } from "../../services/Service";
 import { TextFields } from "@mui/icons-material";
 import { Link, useNavigate } from "react-router-dom";
 import User from "../../models/User";
+import { toast } from "react-toastify";
 
 function CadastroUsuario() {
     let navigate = useNavigate();
@@ -54,15 +55,33 @@ function CadastroUsuario() {
 
             try {
                 await cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
-                alert('Usuario cadastrado com sucesso')
-
+                toast.success('Usuário cadastrado com sucesso', {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    theme: 'colored',
+                    progress: undefined,
+                })
+                
             } catch (error) {
                 console.log(`Error: ${error}`)
                 alert("Erro ao cadastrar o Usuário")
             }
 
         } else {
-            alert('Dados inconsistentes. Favor verificar as informações de cadastro.')
+            toast.error('Dados inconsistentes. Favor verificar as informações de cadastro', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: 'colored',
+                progress: undefined,
+            })
 
             setUser({ ...user, senha: "" })
             setConfirmarSenha("")
